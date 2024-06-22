@@ -6,6 +6,7 @@ urlpatterns = [
     path('', views.firstpage, name='firstpage'),
     path('login/', views.login, name='login'),
     path('signup/', views.signup, name='signup'),
+    path('signup_done/', views.signup_done, name='signup_done'),
     path('mainpage/', views.mainpage, name='mainpage'),
     path('secondpage_a/', views.secondpage_a, name='secondpage_a'),
     path('secondpage_b/', views.secondpage_b, name='secondpage_b'),
@@ -18,5 +19,10 @@ urlpatterns = [
     path('all_posts/', views.all_posts, name='all_posts'),    
     path('', auth_views.LogoutView.as_view(next_page='firstpage'), name='logout'),
     path('post/<int:post_id>/bookmark/', views.bookmark, name='bookmark'),
+<<<<<<< HEAD
     path('search/tag/', views.search_by_tag, name='search_by_tag'), ]
 
+=======
+    path('search/tag/', views.search_by_tag, name='search_by_tag'),
+    ]
+>>>>>>> 23035f09b7a58e85125142885cbd850f4c1eae0f
