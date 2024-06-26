@@ -1,6 +1,4 @@
-# 콩닥콩닥
-
-## 대학생활을 기억하는 방식을 바꾸다.
+# 대학생활을 기억하는 방식을 바꾸다, "콩닥콩닥"
 
 ![readme_mockup2](./images/intro.png)
 
@@ -75,8 +73,8 @@ python manage.py runserver
 
 ```SSH
 # 프로젝트를 생성하려는 폴더경로에서 git bash를 열고..
-pip install virtualenv
-virtualenv venv --python=3.11
+pip install django
+pipenv shell
 ```
 
 ---
@@ -84,7 +82,7 @@ virtualenv venv --python=3.11
 ### 가상환경 실행 및 장고설치
 
 ```SSH
-source venv/Scripts/activate
+venv\Scripts\activate
 
 # 최초 1회만
 pip install django
@@ -99,7 +97,6 @@ pip install django
 # Model을 건들이지 않았다면, 최초 1회만 실행
 python manage.py makemigrations
 python manage.py migrate
-
 python manage.py runserver
 ```
 
@@ -117,8 +114,8 @@ python manage.py runserver
 
 ### Git-flow 전략
 
-- Git-flow 전략을 기반으로 main, develop 브랜치와 feature 보조 브랜치를 운용했습니다.
-- main, develop, Feat 브랜치로 나누어 개발을 하였습니다. - **main** 브랜치는 무결성 검증 이후 단계에서만 사용하는 브랜치입니다. - **develop** 브랜치는 개발 단계에서 git-flow의 master 역할을 하는 브랜치입니다. - **Feat** 브랜치는 기능 단위로 독립적인 개발 환경을 위하여 사용하고 merge 후 각 브랜치를 삭제해주었습니다.
+- Git-flow 전략을 기반으로 main, dev 브랜치와 feature 이슈 브랜치를 운용했습니다.
+- main, dev, Feature 브랜치로 나누어 개발을 하였습니다. - **main** 브랜치는 무결성 검증 이후 단계에서만 사용하는 브랜치입니다. - **dev** 브랜치는 개발 단계에서 git-flow의 master 역할을 하는 브랜치입니다. - **Feature/#[이슈번호]** 브랜치는 기능 단위로 독립적인 개발 환경을 위하여 사용하고 merge 후 각 이슈 브랜치를 삭제해주었습니다.
 
 ## GitHub Role
 
@@ -273,6 +270,50 @@ python manage.py runserver
 - GitHub Issues를 사용하여 진행 상황을 공유했습니다.
 - 매일 스크럼 회의를 진행하며 작업 순서와 방향성에 대한 고민을 나누고 노션에 회의 내용을 기록했습니다.
 
+<br>
+
+<br>
+
+## 5. 역할 분담(수정필요)
+
+### 🍊[]김지현
+
+- **UI**
+    - 페이지 : 홈, 검색, 게시글 작성, 게시글 수정, 게시글 상세, 채팅방
+    - 공통 컴포넌트 : 게시글 템플릿, 버튼
+- **기능**
+    - 유저 검색, 게시글 등록 및 수정, 게시글 상세 확인, 댓글 등록, 팔로워 게시글 불러오기, 좋아요 기능
+
+<br>
+    
+### 👻김민제
+
+- **UI**
+    - 페이지 : 프로필 설정, 프로필 수정, 팔로잉&팔로워 리스트, 상품 등록, 상품 수정, 채팅 목록, 404 페이지
+    - 공통 컴포넌트 : 탭메뉴, InputBox, Alert 모달, 댓글
+- **기능**
+    - 프로필 설정 및 수정 페이지 유저 아이디 유효성 및 중복 검사, 상품 등록 및 수정
+
+<br>
+
+### 😎양희지
+
+- **UI**
+    - 페이지 : splash 페이지, sns 로그인 페이지, 로그인, 회원가입
+    - 공통 컴포넌트 : 상품 카드, 사용자 배너
+- **기능**
+    - splash 페이지, sns로그인 페이지, 로그인 유효성 및 중복 검사, 회원가입 유효성 및 중복 검사, 이메일 검증, 프로필 설정, 접근제한 설정
+
+<br>
+
+### 🐬지창언
+
+- **UI**
+    - 페이지 : 사용자 프로필 페이지
+    - 공통 컴포넌트 : 탑배너, 하단 모달창
+- **기능**
+    - 팔로우 & 언팔로우, 로그아웃, 하단 모달창, 댓글 삭제, 게시글 삭제, 상품 삭제, 사용자 게시글 앨범형 이미지, 탑 배너 뒤로가기 버튼, Alert 모달
+    
 <br>
 
 <!-- ## 7. 페이지별 기능
